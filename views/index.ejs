@@ -11,44 +11,53 @@
 
 <body>
 
-    <h1 style="font-size: 3rem; font-family: 'Times New Roman', Times, serif; text-align: center;font-weight: bold; color: #998030; margin-top: 20px;">
-        Student Management System
-    </h1>
+    
     <div class="container">
-        <header>
+        <header class="header">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLWNd35h21MMFaJHWIEXoMBh-eFqtS5ECKvg&s" alt="logo" />
             <h1>Student details</h1>
+            <h2 style="font-size: 3rem; font-family: 'Times New Roman', Times, serif; text-align: center;font-weight: bold; color: #998030; margin-top: 20px;">
+        Student Management System</h2>
         </header>
 
 
+            
         <form id="contact-form" action="/add" method="POST">
-            <label for="name">Name</label>
-            <br>
-            <input type="text" name="name" placeholder="Enter Name" required>
-            <br>
-            <label for="rollNo">Roll No</label>
-            <br>
-            <input type="number" name="rollNo" placeholder="Enter Roll No" required>
-            <br>
-            <label for="email">Email</label>
-            <br>
-            <input type="email" name="email" placeholder="Enter Email" required>
-            <br>
-            <label for="department">Department</label>
-            <br>
-            <input type="text" name="department" placeholder="Enter Department" required>
-            <br>
-            <label for="city">City</label>
-            <br>
-            <input type="text" name="city" placeholder="Enter City" required>
-            <br>
-            <label for="grade">Grade</label>
-            <br>
-            <input type="text" name="grade" placeholder="Enter Grade" required>
-            <br>
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rollNo">Roll No</label>
+                <input type="number" id="rollNo" name="rollNo" placeholder="Enter Roll No" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department</label>
+                <input type="text" id="department" name="department" placeholder="Enter Department" required>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="Enter City" required>
+            </div>
+
+            <div class="form-group">
+                <label for="grade">Grade</label>
+                <input type="text" id="grade" name="grade" placeholder="Enter Grade" required>
+            </div>
+
             <button type="submit">Add Student</button>
 
         </form>
+
         <h3><u>Details</u></h3>
         <table>
             <tr>

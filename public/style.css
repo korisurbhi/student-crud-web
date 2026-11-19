@@ -1,96 +1,265 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*,
-*::before,
-*::after {
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ===== Global Styling ===== */
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
-    
-    line-height: 1.5;
-    color: #333;
-    background-color: beige;
-    padding: auto;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f3ff;
+    color: #302e45;
+    line-height: 1.6;
+    padding: 25px 15px;
 }
+
+/* ===== Main Container ===== */
 
 .container {
-    font-family: poppins, sans-serif;
-    font-size: 16px;
-    width: 700px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-header{
-    background-color: rgb(125, 125, 244);
-    color: white;
-    padding: 1rem;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-header img{
-    border-radius: 50%;
-    width: 80px;
-}
-
-input {
-    width: auto;
-    font-size: 18px;
-    margin-bottom: 20px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    
-}
-.contact-form input, .contact-form button{
     width: 100%;
-    padding: 7px;
-    font-size: 1rem;
-    border-radius: 5px;
+    max-width: 950px;
+    margin: 20px auto;
+    padding: 28px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 5px 25px rgba(75, 65, 140, 0.10);
 }
-button {
-    padding: 6px 12px;
-    background: #4CAF50;
+
+/* ===== Header ===== */
+
+.header {
+    background: linear-gradient(135deg, #7568e8, #9288ed);
     color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 22px 15px;
+    margin-bottom: 28px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.header img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.header h2 {
+    width: 100%;
+    font-size: 23px !important;
+    font-family: 'Poppins', sans-serif !important;
+    color: white !important;
+    font-weight: 600 !important;
+    margin-top: 5px !important;
+}
+
+/* ===== Headings ===== */
+
+h2 {
+    color: #39345f;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #39345f;
+    font-size: 20px;
+    margin-top: 25px;
     margin-bottom: 10px;
 }
 
-button:hover {
-    background: #d18222;
+/* ===== Form Styling ===== */
+
+form {
+    margin-bottom: 18px;
 }
 
+label {
+    display: block;
+    color: #46435e;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#contact-form input,
+.container form:not([style]) input {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    padding: 11px 13px;
+    margin-bottom: 15px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #302e45;
+    background: #ffffff;
+    border: 1px solid #dedbea;
+    border-radius: 7px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #796ce5;
+    box-shadow: 0 0 0 3px rgba(121, 108, 229, 0.12);
+}
+
+/* ===== Buttons ===== */
+
+button {
+    padding: 10px 18px;
+    background: #695cda;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #5044bb;
+    transform: translateY(-1px);
+}
+
+#contact-form button {
+    padding: 11px 22px;
+    margin-top: 3px;
+}
+
+/* ===== Student Table ===== */
+
 table {
-    border: 1px solid #333;
-    width: auto;
-    margin-top: 20px;
-    
+    width: 100%;
+    margin-top: 18px;
+    border-collapse: collapse;
+    background: white;
+    border: 1px solid #e6e3f0;
+    border-radius: 8px;
 }
 
 th {
-    
-    background: #e9d78b;
-    color: black;
+    background: #eae7ff;
+    color: #39345f;
+    font-weight: 600;
+    font-size: 13px;
 }
 
-th, td {
-    border: 1px solid #333;
-    padding: 8px;
+th,
+td {
+    padding: 12px 10px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #e9e7f0;
+    font-size: 13px;
 }
+
+tbody tr:hover {
+    background: #f8f7ff;
+}
+
+/* ===== Table Links ===== */
 
 a {
     text-decoration: none;
-    color: blue;
+    color: #6255cf;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #4035a0;
+    text-decoration: underline;
+}
+
+td a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 2px;
+    background: #eae7ff;
+    border-radius: 5px;
+}
+
+/* ===== Delete Button ===== */
+
+td form {
+    display: inline;
+}
+
+td button {
+    background: #e45d70;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+td button:hover {
+    background: #c63f55;
+}
+
+/* ===== Edit Page ===== */
+
+.container > form button {
+    margin-top: 5px;
+}
+
+.container > a {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* ===== Responsive Design ===== */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 16px;
+        margin: 10px auto;
+    }
+
+    .header {
+        padding: 18px 10px;
+        gap: 10px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .header h2 {
+        font-size: 19px !important;
+    }
+
+    #contact-form input,
+    .container form:not([style]) input {
+        max-width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding: 9px 8px;
+    }
 }
